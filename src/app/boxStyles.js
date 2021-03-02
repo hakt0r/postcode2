@@ -203,9 +203,9 @@ export default makeStyles( theme => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: fade(theme.palette.common.white, 0.25),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(theme.palette.common.white, 0.35),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -235,9 +235,13 @@ export default makeStyles( theme => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    paddingTop: '0.8em',
     [theme.breakpoints.up('md')]: {
       width: '20ch',
     },
+    "&::placeholder": {
+      opacity: 0.8
+    }
   },
 
   grow: {
