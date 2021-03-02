@@ -17,9 +17,9 @@ export default makeStyles( theme => ({
   },
 
   blue: {
-    backgroundColor: theme.palette.success.main,
+    backgroundColor: `${theme.palette.success.main} !important`,
     "&:hover": {
-      backgroundColor: theme.palette.success.dark  
+      backgroundColor: `${theme.palette.success.dark} !important`  
     }
   },
 
