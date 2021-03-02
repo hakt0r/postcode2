@@ -18,6 +18,7 @@ export default function CountryList() {
   const   classes = useStyles();
   return (
   <div className={classes.list}>
+    <div style={{width:'100%'}}></div>
     { countries.map( country => <Country key={country.code} country={country} /> ) }
   </div> );
 }
