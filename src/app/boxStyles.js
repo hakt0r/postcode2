@@ -1,7 +1,20 @@
 
 import { makeStyles } from "@material-ui/core";
 
+const fillScreen = {
+  position: 'fixed', top:0, left: 0, width: '100vw', height: '100vh',
+};
+
 export default makeStyles( theme => ({
+  background: {
+    ...fillScreen,
+    opacity: 0.3,
+    filter: 'blur(5px)'
+  },
+  backgroundGradient: {
+    ...fillScreen,
+    background: 'linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 65%)'
+  },
   blue: {
     backgroundColor: theme.palette.success.main,
     "&:hover": {
