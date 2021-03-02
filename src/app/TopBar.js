@@ -20,6 +20,7 @@ const useStyles = makeStyles( (theme) => ({
     display: 'none',
     fontFamily: 'myriad-pro',
     fontSize: '2em',
+    filter: 'drop-shadow(#0000004d 3px 2px 3px)',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
