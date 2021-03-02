@@ -35,5 +35,5 @@ export default function useCountries () {
     
   const countries = useSelector( ({ filteredCountries }) => filteredCountries );
 
-  return countries;
+  return ({ countries, loading, error });
 }

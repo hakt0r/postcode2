@@ -8,6 +8,7 @@ export default makeStyles( theme => ({
       backgroundColor: theme.palette.success.dark  
     }
   },
+
   box: {
     flexGrow:      1,
     cursor:        'pointer',
@@ -48,6 +49,7 @@ export default makeStyles( theme => ({
       marginRight: '0.5ch'
     }
   },
+
   country: {
     backgroundColor: 'white',
     width: '50ch',
@@ -58,6 +60,7 @@ export default makeStyles( theme => ({
     overflow: 'hidden',
     filter: "drop-shadow(#0000004d 1px 1px 1px)",
   },
+
   head: {
     display: 'flex',
     paddingBlock: theme.spacing(0.5),
@@ -67,14 +70,17 @@ export default makeStyles( theme => ({
     maxHeight: '1.8em',
     overflow: 'hidden'
   },
+  
   flag: {
     filter: "drop-shadow(black 0px 0px 1px)"
   },
+
   name: {
     marginLeft: '0.5ch',
     color: "white",
     filter: "drop-shadow(black 1px 1px 0px)"
   },
+
   languages: {
     display: 'flex',
     margin: theme.spacing(1),
