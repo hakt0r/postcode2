@@ -22,3 +22,7 @@ export async function languageSelect(language){
 export async function languageRemove(language){
   dispatch({ type: 'language:remove', language });
 }
+
+export async function languageSwap(){
+  dispatch({ type: 'language:swap' });
+}

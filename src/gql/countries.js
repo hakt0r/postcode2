@@ -28,7 +28,14 @@ export default function useCountries () {
     () => {
       if ( error )   return countriesError(error);
       if ( loading ) return;
-      countriesUpdate(data.countries);
+      const c = [ ...data.countries ];
+      const antarctica = c.findIndex( c => c.name === 'Antarctica' );
+      c[antarctica] = { ...c[antarctica] };
+      c[antarctica].languages = [{
+        code: 'pg',
+        name: 'Penguinese'
+      }]
+      countriesUpdate(c);
     },
     [data,error,loading]
   );

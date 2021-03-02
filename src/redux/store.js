@@ -40,8 +40,12 @@ function reducer ( state = defaultState, action ) {
         return { ...state, languages: [ language, ...state.languages].slice(0,2) }
 
       case 'language:remove':
-        return { ...state, languages: state.languages.filter( l => l.name === language.name ) }
-      
+        return { ...state, languages: state.languages.filter( l => l.name !== language.name ) }
+
+      case 'language:swap':
+        if ( state.languages.length < 2 ) return state;
+        return { ...state, languages: [ state.languages[1], state.languages[0] ] }
+        
     default: return state;
   }
 };

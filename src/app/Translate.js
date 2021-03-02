@@ -1,6 +1,8 @@
 
 import { useSelector }    from "react-redux";
-import { makeStyles }     from "@material-ui/core";
+import { IconButton, makeStyles }     from "@material-ui/core";
+import { languageSwap }   from "../redux/actions";
+import { MdSwapHoriz }    from "react-icons/md";
 import   AppBar           from '@material-ui/core/AppBar';
 import   Toolbar          from '@material-ui/core/Toolbar';
 import   SelectedLanguage from './SelectedLanguage';
@@ -11,19 +13,31 @@ const useStyles = makeStyles( theme => ({
   bar: {
     top: 'auto',
     bottom: 0
+  },
+  swapButton: {
+    marginRight: theme.spacing(1)
+  },
+  swap: {
+    fontSize: '2em',
   }
 }));
 
 
 export default function Translate() {
-  const { bar, offset } = useStyles();
+  const { bar, offset, swap, swapButton } = useStyles();
   const languages = useSelector( ({languages}) => languages );
   if ( ! languages.length ) return null;
   return <>
   <div className={offset} />
   <AppBar position="fixed" className={bar}>
     <Toolbar>
-    { languages.map( lang => <SelectedLanguage key={lang.code} lang={lang}/> ) }
+    { languages[0] ? <SelectedLanguage lang={languages[0]}/> : null }
+    { languages[1] ? <>
+      <IconButton className={swapButton} onClick={e=>languageSwap()}>
+        <MdSwapHoriz color="white" className={swap}/>
+      </IconButton>
+      <SelectedLanguage lang={languages[1]}/>
+    </> : null }
     <TranslateButton/>
     </Toolbar>
   </AppBar>

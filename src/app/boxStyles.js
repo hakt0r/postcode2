@@ -1,5 +1,5 @@
 
-import { fade, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
 const fillScreen = {
   position: 'fixed', top:0, left: 0, width: '100vw', height: '100vh',
@@ -125,6 +125,7 @@ export default makeStyles( theme => ({
     paddingInline: theme.spacing(1.5),
     borderRadius:  theme.spacing(0.5),
     whiteSpace:    'pre',
+    fontSize:      '1.2rem',
 
     "&.selected": {
       background: 'blue'
