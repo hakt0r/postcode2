@@ -1,22 +1,10 @@
 
 import { useSelector }  from "react-redux";
-
-import { makeStyles }   from '@material-ui/core/styles';
 import AppBar           from '@material-ui/core/AppBar';
 import Toolbar          from '@material-ui/core/Toolbar';
 import SelectedLanguage from './SelectedLanguage';
 import TranslateButton  from './TranslateButton';
-
-const useStyles = makeStyles( (theme) => ({
-  grow: {
-    flexGrow: 1,
-  },
-  offset: theme.mixins.toolbar,
-  bar: {
-    top: 'auto',
-    bottom: 0
-  }
-}));
+import useStyles        from './boxStyles';
 
 export default function Translate() {
   const { grow, bar, offset } = useStyles();

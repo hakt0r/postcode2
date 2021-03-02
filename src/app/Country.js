@@ -1,6 +1,6 @@
 
-import   Language     from "./Language";
-import   useStyles    from './boxStyles';
+import Language  from "./Language";
+import useStyles from './boxStyles';
 
 export default function Country({country:{name,emoji,languages}}) {
   const classes = useStyles();

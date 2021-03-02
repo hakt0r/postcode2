@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux';
-import   useStyles    from './boxStyles';
+import   useStyles     from './boxStyles';
 
 export default function TranslateButton({lang}) {
   const { box, blue } = useStyles();
