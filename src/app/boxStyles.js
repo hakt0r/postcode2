@@ -6,11 +6,13 @@ const fillScreen = {
 };
 
 export default makeStyles( theme => ({
+
   background: {
     ...fillScreen,
     opacity: 0.3,
     filter: 'blur(5px)'
   },
+
   backgroundGradient: {
     ...fillScreen,
     background: 'linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 65%)'
@@ -148,6 +150,7 @@ export default makeStyles( theme => ({
       color: theme.palette.success.main
     }
   },
+
   centerLoader: {
     width: '90vw',
     height: '90vh',
@@ -200,50 +203,6 @@ export default makeStyles( theme => ({
     }
   },
 
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.25),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.35),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-  },
-
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  inputRoot: {
-    color: 'inherit',
-  },
-
-  inputField: {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    paddingTop: '0.8em',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-    "&::placeholder": {
-      opacity: 0.8
-    }
-  },
-
   grow: {
     flexGrow: 1,
   },
@@ -253,16 +212,6 @@ export default makeStyles( theme => ({
     height: `calc( 4em - ${theme.spacing(2)}px )`,
     filter: 'drop-shadow(#0000004d 3px 2px 3px)',
     paddingRight: theme.spacing(1)
-  },
-
-  title: {
-    display: 'none',
-    fontFamily: 'myriad-pro',
-    fontSize: '2em',
-    filter: 'drop-shadow(#0000004d 3px 2px 3px)',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
   },
 
   offset: theme.mixins.toolbar,

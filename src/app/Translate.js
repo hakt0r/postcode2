@@ -1,10 +1,19 @@
 
-import { useSelector }  from "react-redux";
-import AppBar           from '@material-ui/core/AppBar';
-import Toolbar          from '@material-ui/core/Toolbar';
-import SelectedLanguage from './SelectedLanguage';
-import TranslateButton  from './TranslateButton';
-import useStyles        from './boxStyles';
+import { useSelector }    from "react-redux";
+import { makeStyles }     from "@material-ui/core";
+import   AppBar           from '@material-ui/core/AppBar';
+import   Toolbar          from '@material-ui/core/Toolbar';
+import   SelectedLanguage from './SelectedLanguage';
+import   TranslateButton  from './TranslateButton';
+
+const useStyles = makeStyles( theme => ({
+  offset: theme.mixins.toolbar,
+  bar: {
+    top: 'auto',
+    bottom: 0
+  }
+}));
+
 
 export default function Translate() {
   const { bar, offset } = useStyles();
