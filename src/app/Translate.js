@@ -7,9 +7,8 @@ import TranslateButton  from './TranslateButton';
 import useStyles        from './boxStyles';
 
 export default function Translate() {
-  const { grow, bar, offset } = useStyles();
+  const { bar, offset } = useStyles();
   const languages = useSelector( ({languages}) => languages );
-  console.log(languages)
   if ( ! languages.length ) return null;
   return <>
   <div className={offset} />
