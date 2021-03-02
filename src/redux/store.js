@@ -20,7 +20,7 @@ function reducer ( state = defaultState, action ) {
       return { ...state, loading: false, error };
 
     case 'search:change':
-      const filterLower = state.searchTerm.toLocaleLowerCase();
+      const filterLower = searchTerm.toLocaleLowerCase();
       const filteredCountries =
         ! state.searchTerm.trim()
         ? state.countries
