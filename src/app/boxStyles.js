@@ -57,9 +57,6 @@ export default makeStyles( theme => ({
     marginBottom: theme.spacing(1),
     overflow: 'hidden',
     filter: "drop-shadow(#0000004d 1px 1px 1px)",
-    "&:first-of-type":{
-      marginTop: theme.spacing(1)
-    }
   },
   head: {
     display: 'flex',
