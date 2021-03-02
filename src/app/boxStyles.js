@@ -157,28 +157,28 @@ export default makeStyles( theme => ({
     height: '90vh',
     position: 'relative',
     left:'50vw',
-    top:'1vh',
+    top:'20vh',
     overflow: 'hidden',
-    maxHeight: 'calc( 90vh - 56px )', 
+    maxHeight: 'calc( 50vh - 56px )', 
     [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: { 
-      maxHeight: 'calc( 90vh - 48px )', 
+      maxHeight: 'calc( 50vh - 48px )', 
     }, 
     [theme.breakpoints.up('sm')]: { 
-      maxHeight: 'calc( 90vh - 64px )', 
+      maxHeight: 'calc( 50vh - 64px )', 
     },
     transform: 'translate(-50%)',
     textAlign: 'center',
     "& > div": {
       position: 'relative',
-      maxHeight: 'calc( 90vh - 56px )', 
-      maxWidth: 'calc( 90vh - 56px )', 
+      maxHeight: 'calc( 50vh - 56px )', 
+      maxWidth: 'calc( 50vh - 56px )', 
       [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: { 
-        maxHeight: 'calc( 90vh - 48px )', 
-        maxWidth: 'calc( 90vh - 48px )', 
+        maxHeight: 'calc( 50vh - 48px )', 
+        maxWidth: 'calc( 50vh - 48px )', 
       }, 
       [theme.breakpoints.up('sm')]: { 
-        maxHeight: 'calc( 90vh - 64px )', 
-        maxWidth: 'calc( 90vh - 64px )', 
+        maxHeight: 'calc( 50vh - 64px )', 
+        maxWidth: 'calc( 50vh - 64px )', 
       },
       opacity: '0.5'
     },
