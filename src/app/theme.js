@@ -12,6 +12,9 @@ const theme = createMuiTheme({
     },
     success: {
       main: '#0067b3'
+    },
+    warning: {
+      main: '#f58d06'
     }
   },
 });

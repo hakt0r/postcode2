@@ -12,7 +12,8 @@ const useStyles = makeStyles( theme => ({
   offset: theme.mixins.toolbar,
   bar: {
     top: 'auto',
-    bottom: 0
+    bottom: 0,
+    background: '#f58d06'
   },
   swapButton: {
     marginRight: theme.spacing(1)

@@ -215,11 +215,6 @@ export default makeStyles( theme => ({
     paddingRight: theme.spacing(1)
   },
 
-  offset: theme.mixins.toolbar,
-
-  bar: {
-    top: 'auto',
-    bottom: 0
-  }
+  offset: theme.mixins.toolbar
 
 }));
